@@ -4,21 +4,29 @@ body {
 
 html {
   display: flex;
-  width: 450px;
   margin: 0;
   padding: 0;
 }
 
 head {
-  width: 450px;
+  width: 380px;
 }
 
-#bodyContenair {
-  width: 450px;
+body {
+  height: 2200px;
+}
+
+.bodyContenair {
+  width: 380px;
   height: 100%;
 }
 
+main {
+  height: 87%;
+}
+
 header {
+  display: contents;
   width: 100%;
   height: 3%;
 }
@@ -27,33 +35,43 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.headerBack {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+.headerBack a {
+  align-self: center;
 }
 
 footer {
-  height: 10%;
+  height: 9%;
   background-color: #2a2b2c;
 }
 footer p, footer i, footer a {
   color: #ffffff;
   text-decoration: none;
-}
-
-#footerContain {
-  height: 7%;
-  color: #ffffff;
+  margin: 0;
 }
 
 #logoFooter {
   height: 20px;
-  width: 200px;
   filter: invert(100%);
   -webkit-filter: invert(100%);
+  margin: 20px;
 }
 
-#footerParent {
+.footerParent {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 50%;
+  width: 100%;
+  padding-left: 20px;
 }
 
 .footerChildLogo {
@@ -76,47 +94,53 @@ footer p, footer i, footer a {
   width: 100%;
 }
 
-#localisation {
-  display: flex;
-  flex-direction: column;
-  height: 25%;
+.localisation {
+  height: 3%;
+  background-color: #dddddd;
+  box-shadow: 0px 0px 5px 1px #727272;
 }
-
-#localisationSearch {
+.localisation__contain {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-#localisationReservation {
+.reservation {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-#reservationTxt {
+  justify-content: flex-start;
   align-items: center;
-}
-#reservationTxt h1 {
-  text-align: center;
-}
-#reservationTxt p {
-  text-align: center;
+  background-color: whitesmoke;
+  height: 15%;
 }
 
-#fonctionnement {
+.reservationTxt {
+  align-items: center;
+  width: 90%;
+}
+.reservationTxt h1 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  width: 85%;
+  margin-inline: auto;
+}
+.reservationTxt p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.fonctionnement {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 25%;
+  justify-content: space-around;
+  height: 22%;
   width: 100%;
 }
-
-#fonctionSteps {
-  display: flex;
-  flex-direction: column;
+.fonctionnement__steps {
   width: 90%;
+  height: 85%;
 }
 
 .steps {
@@ -126,33 +150,48 @@ footer p, footer i, footer a {
   height: 28%;
 }
 
-.stepDescription {
+.steps__description {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-around;
-  width: 70%;
-}
-.stepDescription i {
-  justify-self: flex-start;
-}
-
-#restaurants {
-  height: 45%;
   width: 100%;
 }
+.steps__description i {
+  justify-self: flex-start;
+}
+.steps__description p {
+  margin: 0;
+}
 
-#containRestaurants {
+.restaurants {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 95%;
+  align-items: center;
+  height: 60%;
+  width: 100%;
+  background-color: whitesmoke;
+}
+.restaurants h2 {
+  align-self: flex-start;
+}
+
+.containRestaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 92%;
+  height: 90%;
 }
 
 .restaurantThumb {
   height: 24%;
   width: 100%;
   margin: 0;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  box-shadow: 2px 5px 10px 1px #F2F2F2;
 }
 
 .thumb {
@@ -162,36 +201,45 @@ footer p, footer i, footer a {
   height: 100%;
   margin: 0;
 }
-
-.thumbTop {
+.thumb .thumbTop {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 60%;
+  height: 70%;
 }
-
-.thumbImg {
-  height: 200px;
+.thumb .thumbTop .thumbImg {
+  height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
 }
-
-.new {
+.thumb .thumbTop .new {
   position: absolute;
-  right: 40px;
-  height: 45px;
-  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 255px;
+  height: 32px;
+  width: 100px;
+  background-color: #99E2D0;
 }
-
-.thumbBottom {
+.thumb .thumbTop .new p {
+  margin: 0;
+}
+.thumb .thumbBottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 40%;
+  height: 30%;
+  width: 90%;
+  padding-left: 20px;
+}
+.thumb .thumbBottom .fa-heart:hover {
+  color: indigo;
 }
 
-#button {
+.button {
   display: flex;
   justify-content: center;
 }
