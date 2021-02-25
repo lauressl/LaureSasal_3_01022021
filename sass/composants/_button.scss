@@ -1,4 +1,12 @@
-.button {
+button {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 230px;
+    border: 1px;
+    border-radius: 100px;
+    color: white;
+    background-image: linear-gradient($colour_secondary, $colour_primary);
+    font-size: 15px;
 }

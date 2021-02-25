@@ -1,0 +1,92 @@
+.container {
+    width: 100%;
+    background-color: $background_color_light;
+}
+
+.imgHeaderMain {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.menu {
+    display: flex;
+    position:relative;
+    bottom: 45px;
+    height: 1200px;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background_color_light;
+    border-radius: 40px 40px 0 0;
+    &__contain{
+        width: 90%;
+    }
+    &__name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: capitalize;
+        font-family: Shrikhand;
+        margin-top: 5px;
+    }
+    &__step {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        #separate {
+            margin: 0;
+            background-color: $colour_tertiary;
+            border: none;
+            height: 3px;
+            width: 35px;
+            text-align: left;
+        }
+        &__title {
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        &__dish {
+            display:flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 20px;
+            height: 75px;
+            margin-top: 15px;
+            box-shadow: 2px 5px 10px 1px #c7c7c7;
+            &__txt{
+                display:flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                margin-left: 10px;
+                width: 80%;
+                h2 {
+                    font-size: 16px;
+                    margin:0;
+                }
+                p {
+                    font-size: 15px;
+                    margin:0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+            }
+            &__price{
+                align-self: flex-end;
+                margin-right: 20px;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.commandButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
