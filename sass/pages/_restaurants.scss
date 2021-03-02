@@ -30,7 +30,7 @@
         align-items: center;
         justify-content: space-between;
         text-transform: capitalize;
-        font-family: Shrikhand;
+        font-family: "Shrikhand";
         margin-top: 5px;
     }
     &__step {
@@ -66,6 +66,9 @@
                 h2 {
                     font-size: 16px;
                     margin:0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
                 p {
                     font-size: 15px;
@@ -80,6 +83,21 @@
                 margin-right: 20px;
                 font-size: 15px;
                 font-weight: bold;
+            }
+            &:hover{
+                margin-right: 100px;
+            }
+        }
+        &__check{
+            display:none;
+        }
+        :hover{
+            &__check{
+                display: block;
+                width: 20%;
+                height: 75px;
+                background-color: $colour_tertiary;
+                z-index: 1;
             }
         }
     }
