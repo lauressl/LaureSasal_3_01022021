@@ -1,3 +1,7 @@
+h1 {
+  font-weight: 400;
+}
+
 .loader {
   width: 100px;
   height: 100px;
@@ -395,11 +399,39 @@ footer p, footer i, footer a {
   text-transform: uppercase;
   margin-bottom: 5px;
 }
+.menu__step__box {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.menu__step__box__check {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 75px;
+  margin-right: -100px;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  align-self: flex-end;
+  z-index: 1;
+  transition: margin 1s linear;
+}
+.menu__step__box__check .fas {
+  align-self: center;
+  color: white;
+  font-size: 25px;
+  transition: rotate;
+}
+.menu__step__box:hover .menu__step__box__check {
+  margin-right: 0;
+  transition: margin 1s linear;
+}
 .menu__step__dish {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 20px 0 0 20px;
+  width: 100%;
   height: 75px;
   margin-top: 15px;
   box-shadow: 2px 5px 10px 1px #c7c7c7;
@@ -431,19 +463,6 @@ footer p, footer i, footer a {
   font-size: 15px;
   font-weight: bold;
 }
-.menu__step__dish:hover {
-  margin-right: 100px;
-}
-.menu__step__check {
-  display: none;
-}
-.menu__step :hover__check {
-  display: block;
-  width: 20%;
-  height: 75px;
-  background-color: #99E2D0;
-  z-index: 1;
-}
 
 .commandButton {
   display: flex;
@@ -463,6 +482,9 @@ button {
   color: white;
   background-image: linear-gradient(#FF79DA, #9356DC);
   font-size: 15px;
+}
+button:hover {
+  box-shadow: 2px 5px 10px 1px #c7c7c7;
 }
 
 @media all and (min-width: 700px) and (max-width: 1024px) {

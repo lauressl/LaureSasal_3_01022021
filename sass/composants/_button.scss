@@ -9,4 +9,7 @@ button {
     color: white;
     background-image: linear-gradient($colour_secondary, $colour_primary);
     font-size: 15px;
+    &:hover {
+        box-shadow: 2px 5px 10px 1px #c7c7c7;
+    }
 }
