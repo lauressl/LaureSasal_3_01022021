@@ -2,13 +2,38 @@ h1 {
   font-weight: 400;
 }
 
+.loading {
+  background-color: rgba(22, 22, 22, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 2245px;
+  z-index: 9999;
+  animation: loading 3s;
+  -webkit-animation: loading 3s;
+  -moz-animation: loading 3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@keyframes loading {
+  0% {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
 .loader {
   width: 100px;
   height: 100px;
   border-radius: 100%;
   position: relative;
+  top: 390px;
   margin: 0 auto;
-  display: none;
 }
 
 #loader-1:before, #loader-1:after {
@@ -59,16 +84,17 @@ html {
 }
 
 head {
-  width: 380px;
+  width: 100%;
 }
 
 body {
   height: 100%;
   margin: auto;
+  width: 100%;
 }
 
 .bodyContenair {
-  width: 380px;
+  width: 100%;
   height: 100%;
 }
 
@@ -87,8 +113,9 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 50px;
+  height: 70px;
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 .bodyContenair > header img {
   width: 50%;
@@ -373,6 +400,10 @@ footer p, footer i, footer a {
 }
 .menu__contain {
   width: 90%;
+  /*opacity:0;
+  animation: menu__contain 3s;
+  -webkit-animation: menu__contain 3s;
+  -moz-animation: menu__contain 3s;*/
 }
 .menu__name {
   display: flex;
@@ -403,45 +434,47 @@ footer p, footer i, footer a {
   display: flex;
   width: 100%;
   overflow: hidden;
+  height: 75px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 2px 5px 10px 1px #c7c7c7;
+  margin: 10px;
 }
 .menu__step__box__check {
   display: flex;
   justify-content: center;
   width: 100px;
-  height: 75px;
+  height: 100%;
   margin-right: -100px;
   background-color: #99E2D0;
-  border-radius: 0 20px 20px 0;
-  align-self: flex-end;
-  z-index: 1;
   transition: margin 1s linear;
 }
 .menu__step__box__check .fas {
   align-self: center;
   color: white;
   font-size: 25px;
-  transition: rotate;
 }
 .menu__step__box:hover .menu__step__box__check {
   margin-right: 0;
-  transition: margin 1s linear;
+  transition: 1s linear;
+}
+.menu__step__box:hover .menu__step__box__check .fas {
+  transform: rotate(360deg);
+  transition: transform 1s ease-in-out;
 }
 .menu__step__dish {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  border-radius: 20px 0 0 20px;
   width: 100%;
-  height: 75px;
-  margin-top: 15px;
-  box-shadow: 2px 5px 10px 1px #c7c7c7;
+  height: 100%;
 }
 .menu__step__dish__txt {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-left: 10px;
-  width: 80%;
+  width: 100%;
 }
 .menu__step__dish__txt h2 {
   font-size: 16px;
@@ -459,11 +492,37 @@ footer p, footer i, footer a {
 }
 .menu__step__dish__price {
   align-self: flex-end;
-  margin-right: 20px;
+  margin: 5px 30px 11px 0px;
   font-size: 15px;
   font-weight: bold;
 }
+.menu__step__dish:hover .menu__step__dish__txt {
+  transition: 1s linear;
+  width: 80%;
+}
 
+/*@keyframes menu__contain{
+    0%{
+        :nth-child(1){
+            opacity:1;
+        }
+    }
+    25%{
+        :nth-child(2){
+            opacity:1;
+        }
+    }
+    50%{
+        :nth-child(3){
+            opacity:1;
+        }
+    }
+    100%{
+        :nth-child(4){
+            opacity:1;
+        }
+    }
+}*/
 .commandButton {
   display: flex;
   justify-content: center;
@@ -485,16 +544,61 @@ button {
 }
 button:hover {
   box-shadow: 2px 5px 10px 1px #c7c7c7;
+  filter: brightness(110%);
 }
 
-@media all and (min-width: 700px) and (max-width: 1024px) {
+/*@media all and (min-width: 700px) and max-width: 1024px) {
+    body {
+        width: 700px;
+    }
+    .bodyContenair {
+        margin: auto;
+        width: 700px;
+    }
+    .bodyContenair>header {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 5px;
+        img{
+            width: 80%;
+        }
+        a {
+            left: 10px;
+            top: 20px;
+            position: absolute;
+        }
+
+    }
+    .media_loc_resa_fonct {
+        display:flex;
+        width: 100%;
+    }
+    .media_loc_resa {
+        width: 700px;
+    }
+    .fonctionnement {
+        justify-content: center;
+        height: 365px;
+        width: 90%;
+        margin-left: 25px;
+        margin-top: 0;
+        padding-top: 0;
+
+        h2 {
+            align-self: center;
+            margin-top: 0;
+        }
+    }
+}*/
+@media all and (min-width: 700px) {
   body {
-    width: 700px;
+    width: 100%;
   }
 
   .bodyContenair {
     margin: auto;
-    width: 700px;
+    width: 100%;
+    max-width: 1025px;
   }
 
   .bodyContenair > header {
@@ -503,80 +607,46 @@ button:hover {
     margin-bottom: 5px;
   }
   .bodyContenair > header img {
-    width: 80%;
+    width: 40%;
   }
   .bodyContenair > header a {
-    left: 10px;
-    top: 20px;
+    left: 150px;
+    top: 42px;
     position: absolute;
+    font-size: 25px;
   }
 
   .media_loc_resa_fonct {
     display: flex;
     width: 100%;
+    height: 450px;
   }
 
   .media_loc_resa {
     width: 700px;
   }
+  .media_loc_resa .reservation {
+    height: 370px;
+  }
+  .media_loc_resa .reservation__txt {
+    height: 220px;
+    margin-top: 45px;
+  }
 
   .fonctionnement {
-    justify-content: center;
-    height: 365px;
+    height: 440px;
     width: 90%;
     margin-left: 25px;
-    margin-top: 0;
+    margin-top: 25px;
     padding-top: 0;
   }
   .fonctionnement h2 {
     align-self: center;
     margin-top: 0;
   }
-}
-@media all and (min-width: 1025px) {
-  body {
-    width: 1025px;
-  }
 
-  .bodyContenair {
-    margin: auto;
-    width: 1025px;
-  }
-
-  .bodyContenair > header {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 5px;
-  }
-  .bodyContenair > header img {
-    width: 80%;
-  }
-  .bodyContenair > header a {
-    left: 10px;
-    top: 20px;
-    position: absolute;
-  }
-
-  .media_loc_resa_fonct {
-    display: flex;
-    width: 100%;
-  }
-
-  .media_loc_resa {
-    width: 700px;
-  }
-
-  .fonctionnement {
-    justify-content: center;
-    height: 365px;
-    width: 90%;
-    margin-left: 25px;
-    margin-top: 0;
-    padding-top: 0;
-  }
-  .fonctionnement h2 {
-    align-self: center;
-    margin-top: 0;
+  .restaurants {
+    height: 1465px;
   }
 }
 

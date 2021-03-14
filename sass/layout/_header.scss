@@ -9,8 +9,9 @@ header {
     display:flex;
     justify-content: center;
     width: 100%;
-    height: 50px;
+    height: 70px;
     margin-bottom: 5px;
+    margin-top: 5px;
     img{
         width: 50%;
     }
@@ -19,5 +20,4 @@ header {
         top: 20px;
         position: absolute;
     }
-
 }

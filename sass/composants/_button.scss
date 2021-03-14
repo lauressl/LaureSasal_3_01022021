@@ -7,9 +7,10 @@ button {
     border: 1px;
     border-radius: 100px;
     color: white;
-    background-image: linear-gradient($colour_secondary, $colour_primary);
+    background-image: $background_gradiant;
     font-size: 15px;
     &:hover {
         box-shadow: 2px 5px 10px 1px #c7c7c7;
+        filter: brightness(110%);
     }
 }
