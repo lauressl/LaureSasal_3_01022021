@@ -1,47 +1,3 @@
-/*@media all and (min-width: 700px) and max-width: 1024px) {
-    body {
-        width: 700px;
-    }
-    .bodyContenair {
-        margin: auto;
-        width: 700px;
-    }
-    .bodyContenair>header {
-        width: 100%;
-        height: 100px;
-        margin-bottom: 5px;
-        img{
-            width: 80%;
-        }
-        a {
-            left: 10px;
-            top: 20px;
-            position: absolute;
-        }
-    
-    }
-    .media_loc_resa_fonct {
-        display:flex;
-        width: 100%;
-    }
-    .media_loc_resa {
-        width: 700px;
-    }
-    .fonctionnement {
-        justify-content: center;
-        height: 365px;
-        width: 90%;
-        margin-left: 25px;
-        margin-top: 0;
-        padding-top: 0;
-
-        h2 {
-            align-self: center;
-            margin-top: 0;
-        }
-    }
-}*/
-
 @media all and (min-width: 700px) {
     body {
         width: 100%;
@@ -55,11 +11,13 @@
         width: 100%;
         height: 100px;
         margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
         img{
             width: 40%;
         }
         a {
-            left: 150px;
+            left: 170px;
             top: 42px;
             position: absolute;
             font-size: 25px;

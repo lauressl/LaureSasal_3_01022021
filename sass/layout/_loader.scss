@@ -8,18 +8,13 @@
     -webkit-animation: loading 3s;
     -moz-animation: loading 3s;
     visibility: hidden;
-    opacity: 0;
 }
 @keyframes loading{
     0%{
-        transform:none;
         visibility: visible;
-        opacity: 1;
     }
     100%{
-        transform: translateX(-100%);
         visibility: hidden;
-        opacity:0;
     }
 }
 .loader{

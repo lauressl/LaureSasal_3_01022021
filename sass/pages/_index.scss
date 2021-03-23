@@ -51,6 +51,7 @@
     padding-top: 25px;
     h2 {
         align-self: start;
+        margin-left: 10px;
     }
     &__steps {
         width: 90%;
@@ -105,10 +106,11 @@
     align-items: center;
     height: 1200px;
     width: 100%;
-    padding-top: 25px;;
+    padding-top: 25px;
     background-color: $background_color_light;
     h2 {
         align-self: flex-start;
+        margin-left: 10px;
     }
     &__contain{
         display: flex;
@@ -154,7 +156,7 @@
             right: 10px;
             height: 32px;
             width: 100px;
-            color: darker($colour_tertiary);
+            color: darken($colour_tertiary,40%);
             background-color: $colour_tertiary;
             p {
                 margin:0;

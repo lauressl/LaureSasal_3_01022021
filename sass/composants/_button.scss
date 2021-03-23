@@ -14,3 +14,9 @@ button {
         filter: brightness(110%);
     }
 }
+.commandButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
