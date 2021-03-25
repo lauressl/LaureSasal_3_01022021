@@ -107,6 +107,7 @@ header {
 .bodyContenair > header {
   display: flex;
   justify-content: center;
+  position: relative;
   width: 100%;
   height: 70px;
   margin-bottom: 5px;
@@ -385,6 +386,16 @@ footer p, footer i, footer a {
   object-fit: cover;
 }
 
+@keyframes menu_appears {
+  0% {
+    margin-top: -5px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
 .menu {
   display: flex;
   position: relative;
@@ -397,17 +408,26 @@ footer p, footer i, footer a {
 }
 .menu__contain {
   width: 90%;
+}
+.menu__contain :nth-child(1) {
+  animation: menu_appears 1s 1;
+  -webkit-animation: menu_appears 1s 1;
+  -moz-animation: menu_appears 1s 1;
+}
+.menu__contain :nth-child(2) {
   animation: menu_appears 2s 1;
   -webkit-animation: menu_appears 2s 1;
   -moz-animation: menu_appears 2s 1;
 }
-@keyframes menu__appears {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.menu__contain :nth-child(3) {
+  animation: menu_appears 3s 1;
+  -webkit-animation: menu_appears 3s 1;
+  -moz-animation: menu_appears 3s 1;
+}
+.menu__contain :nth-child(4) {
+  animation: menu_appears 4s 1;
+  -webkit-animation: menu_appears 4s 1;
+  -moz-animation: menu_appears 4s 1;
 }
 .menu__name {
   display: flex;
@@ -544,12 +564,13 @@ button:hover {
     margin-bottom: 5px;
     display: flex;
     justify-content: center;
+    position: relative;
   }
   .bodyContenair > header img {
-    width: 40%;
+    width: 35%;
   }
   .bodyContenair > header a {
-    left: 170px;
+    left: 5%;
     top: 42px;
     position: absolute;
     font-size: 25px;
