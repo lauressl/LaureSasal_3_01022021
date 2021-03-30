@@ -9,9 +9,13 @@ button {
     color: white;
     background-image: $background_gradiant;
     font-size: 15px;
+    outline-style: none;
     &:hover {
         box-shadow: 2px 5px 10px 1px #c7c7c7;
         filter: brightness(110%);
+    }
+    :checked {
+        outline: 0 !important;
     }
 }
 .commandButton{
@@ -19,4 +23,5 @@ button {
     justify-content: center;
     align-items: center;
     height: 100px;
+    outline: none;
 }

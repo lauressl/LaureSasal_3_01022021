@@ -343,15 +343,19 @@ footer p, footer i, footer a {
   width: 90%;
   padding-left: 20px;
 }
-.thumb__bottom .hearts {
-  position: relative;
-  width: 16px;
-  height: 16px;
+.thumb__bottom--txt {
+  line-height: 10px;
 }
-.thumb__bottom .hearts :first-child {
+
+.hearts {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.hearts :first-child {
   position: absolute;
 }
-.thumb__bottom .hearts :last-child {
+.hearts :last-child {
   position: absolute;
   opacity: 0;
   transition: opacity 0.5s;
@@ -359,15 +363,12 @@ footer p, footer i, footer a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.thumb__bottom .hearts :last-child:hover {
+.hearts :last-child:hover {
   opacity: 1;
   transition: opacity 0.5s;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.thumb__bottom--txt {
-  line-height: 10px;
 }
 
 .container {
@@ -400,7 +401,7 @@ footer p, footer i, footer a {
   display: flex;
   position: relative;
   bottom: 45px;
-  height: 1200px;
+  height: 1250px;
   flex-direction: column;
   align-items: center;
   background-color: whitesmoke;
@@ -408,11 +409,11 @@ footer p, footer i, footer a {
 }
 .menu__contain {
   width: 90%;
-}
-.menu__contain :nth-child(1) {
-  animation: menu_appears 1s 1;
-  -webkit-animation: menu_appears 1s 1;
-  -moz-animation: menu_appears 1s 1;
+  /*:nth-child(1){
+      animation: menu_appears 1s 1 ;
+      -webkit-animation: menu_appears 1s 1;
+      -moz-animation: menu_appears 1s 1;
+  }*/
 }
 .menu__contain :nth-child(2) {
   animation: menu_appears 2s 1;
@@ -461,7 +462,7 @@ footer p, footer i, footer a {
   border-radius: 20px;
   background: white;
   box-shadow: 2px 5px 10px 1px #c7c7c7;
-  margin: 10px;
+  margin: 10px 0;
 }
 .menu__step__box__dish {
   display: flex;
@@ -516,11 +517,11 @@ footer p, footer i, footer a {
 }
 .menu__step__box:hover .menu__step__box__check {
   margin-right: 0;
-  transition: 1s linear;
+  transition: 0.5s linear;
 }
 .menu__step__box:hover .menu__step__box__check .fas {
   transform: rotate(360deg);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 button {
@@ -534,10 +535,14 @@ button {
   color: white;
   background-image: linear-gradient(#FF79DA, #9356DC);
   font-size: 15px;
+  outline-style: none;
 }
 button:hover {
   box-shadow: 2px 5px 10px 1px #c7c7c7;
   filter: brightness(110%);
+}
+button :checked {
+  outline: 0 !important;
 }
 
 .commandButton {
@@ -545,6 +550,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   height: 100px;
+  outline: none;
 }
 
 @media all and (min-width: 700px) {
